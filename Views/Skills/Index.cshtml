@@ -1,0 +1,21 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model IEnumerable<PortfolioApp.Models.Skill>
+@{
+    ViewData["Title"] = "Skills";
+}
+
+<h2 class="mb-4">My Skills</h2>
+<ul class="list-group">
+    @foreach (var skill in Model)
+    {
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+            @skill.SkillName
+            <span class="badge bg-primary rounded-pill">@skill.Level</span>
+        </li>
+    }
+</ul>
+

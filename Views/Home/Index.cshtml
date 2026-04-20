@@ -1,0 +1,29 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@model PortfolioApp.Models.User
+@{
+    ViewData["Title"] = "Home";
+}
+
+<div class="container-fluid bg-light text-dark py-5">
+    <div class="row align-items-center">
+        <div class="col-md-6">
+            <h1 class="display-4 fw-bold">Hello, I'm @Model.FullName</h1>
+            <p class="lead">@Model.ProfileSummary</p>
+            <p>Email: @Model.Email | Phone: @Model.Phone | Location: @Model.Location</p>
+
+            <!-- Resume Download Button -->
+            <a href="~/files/Faizul_Resume.pdf" class="btn btn-success btn-lg mt-3" download>
+                Download Resume
+            </a>
+        </div>
+        <div class="col-md-6 text-center">
+            <!-- Profile Image -->
+            <img src="~/images/mypic.jpg.jpeg" class="img-fluid rounded-circle shadow-lg" style="max-width:300px;" />
+        </div>
+    </div>
+</div>
+

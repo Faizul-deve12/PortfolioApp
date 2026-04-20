@@ -1,0 +1,29 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model IEnumerable<PortfolioApp.Models.Project>
+@{
+    ViewData["Title"] = "Projects";
+}
+
+<h2 class="mb-4">My Projects</h2>
+<div class="row">
+    @foreach (var project in Model)
+    {
+        <div class="col-md-6 mb-4">
+            <div class="card shadow-sm">
+                <img src="~/images/online-job-portal-illustration-svg-download-png-13578272.webp"class="card-img-top" alt="@project.Title"/>
+                
+                <div class="card-body">
+                    <h5 class="card-title">@project.Title</h5>
+                    <p class="card-text">@project.Description</p>
+                    <p><strong>Technologies:</strong> @project.Technologies</p>
+                    <a href="@project.ProjectLink" target="_blank" class="btn btn-primary">View Project</a>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+
